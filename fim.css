@@ -1,0 +1,33 @@
+.fim {
+    background-color: #ffffffe6;
+    width: 640px;
+    max-width: 92vw;
+    padding: 30px 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+.fim h1 {
+    color: rgb(4, 4, 66);
+    font-size: 64px;
+}
+.fim .sub {
+    margin: 10px 0 20px;
+}
+.fim ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 25px;
+}
+.fim li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+}
+.fim .novo {
+    display: inline-block;
+    padding: 12px 30px;
+    background: blue;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}

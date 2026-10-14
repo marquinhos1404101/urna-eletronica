@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;                 
+    display: flex;           
+    justify-content: center;   
+    align-items: center;      
+    min-height: 100vh;      
+    background-image: url(raphael-nogueira-OkiDIla7K8Q-unsplash.jpg), linear-gradient(135deg, #1f3a8a, #7aa7e6);
+    background-size: cover;
+}
+.login{
+    background-color: #ffffffb9;
+    width: 600px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    border-radius: 20px;
+}
+.login h2{
+    margin-top: 15px;
+    color: rgb(4, 4, 66);
+}
+.cpf{
+    align-items: center;
+    text-align: center;
+    display: flex;
+   flex-direction: column;
+    justify-content: center;
+    margin-top: 80px;
+    align-items: flex-start;
+}
+.cpf button{
+    margin-top: 30px;
+    width: 150px;
+    height: 40px;
+    margin-left: 100px;
+     background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+
+}
+.erro{
+    color: #b00020;
+    min-height: 20px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+.cpf input{
+    padding: 5px;
+   width: 350px;
+   cursor: pointer;
+}

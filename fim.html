@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fim - Urna de Treinamento</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}?v={{ v }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fim.css') }}?v={{ v }}">
+</head>
+<body>
+    <div class="fim">
+        <h1>FIM</h1>
+        <p class="sub">Votação de treinamento concluída. Resumo dos seus votos:</p>
+        <ul>
+            {% for titulo, voto in resumo %}
+            <li>
+                <strong>{{ titulo }}:</strong>
+                {% if voto.tipo == 'candidato' %}
+                    {{ voto.numero }} - {{ voto.nome }} ({{ voto.partido }})
+                {% elif voto.tipo == 'branco' %}
+                    Voto em branco
+                {% else %}
+                    Voto nulo ({{ voto.numero }})
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('sair') }}" class="novo">Nova votação</a>
+    </div>
+</body>
+</html>

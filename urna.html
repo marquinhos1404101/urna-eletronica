@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna de Treinamento - {{ titulo }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}?v={{ v }}">
+</head>
+
+<body data-digitos="{{ digitos }}">
+    <div class="container">
+
+        <div class="principal">
+            <div class="urna">
+                <div class="top">
+                    <h4>TREINAMENTO</h4>
+                    <small>Voto {{ posicao }} de {{ total }}</small>
+                    <p>{{ titulo }}</p>
+                </div>
+
+                <!-- As caixas dos números são criadas pelo script.js -->
+                <div class="numeros" id="numeros"></div>
+
+                <div class="info" id="info"></div>
+            </div>
+
+            <div class="numero">
+                <button type="button" class="tecla">1</button>
+                <button type="button" class="tecla">2</button>
+                <button type="button" class="tecla">3</button>
+                <br>
+                <button type="button" class="tecla">4</button>
+                <button type="button" class="tecla">5</button>
+                <button type="button" class="tecla">6</button>
+                <br>
+                <button type="button" class="tecla">7</button>
+                <button type="button" class="tecla">8</button>
+                <button type="button" class="tecla">9</button>
+                <br>
+                <button type="button" class="tecla">0</button>
+
+                <section>
+                    <button type="button" id="bra">BRANCO</button>
+                    <button type="button" id="can">CANCELAR</button>
+                    <button type="button" id="conf">CONFIRMAR</button>
+                </section>
+            </div>
+        </div>
+
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}?v={{ v }}"></script>
+</body>
+
+</html>
